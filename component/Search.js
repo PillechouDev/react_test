@@ -1,5 +1,7 @@
 import React from 'react'
-import { StyleSheet, View,Button,TextInput} from 'react-native'
+import { StyleSheet, View,Button,TextInput,FlatList,Text} from 'react-native'
+
+import films from '../Helpers/film_data'
 
 
 class Search extends React.Component {
@@ -9,11 +11,18 @@ class Search extends React.Component {
             <View style={styles.main_container}>
                 <TextInput placeholder="Titre du film" style={styles.TextInput}></TextInput>
                 <Button title="Rechercher" onPress={() => {}}></Button>
+                <FlatList
+          data={films}
+          renderItem={({item}) => <Text>{item.title}</Text>}
+        />
             </View>
 
         )
     }
 }
+
+
+
 const styles = StyleSheet.create({
 
     main_container : {
