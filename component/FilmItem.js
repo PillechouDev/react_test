@@ -4,6 +4,8 @@ import {View,Text, StyleSheet,Image} from 'react-native'
 
 class FilmItem extends React.Component {
     render () {
+        const film = this.props.film
+        console.log(this.props.film.id)
         return (    
             <View style={styles.main_container}>
                 <Image
@@ -11,7 +13,7 @@ class FilmItem extends React.Component {
                         source={{uri: "image"}} />
                 <View style={styles.content}>
                     <View style={styles.head}>
-                        <Text style={styles.title_text}>Titre du film</Text>
+                        <Text style={styles.title_text}>{this.props.film.id}</Text>
                         <Text style={styles.title_text}>Note </Text>
                     </View>
                     <View style={styles.desc_container}>
