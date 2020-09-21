@@ -21,5 +21,22 @@
     "@babel/core": "^7.8.6",
     "babel-preset-expo": "~8.1.0"
   },
-  "private": true
+  "private": true,
+  "name": "react_test",
+  "version": "0.0.1",
+  "description": "React Native test",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YohanWildz/react_test.git"
+  },
+  "keywords": [
+    "app",
+    "react"
+  ],
+  "author": "Yohan Widogue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YohanWildz/react_test/issues"
+  },
+  "homepage": "https://github.com/YohanWildz/react_test#readme"
 }
