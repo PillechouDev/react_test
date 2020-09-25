@@ -6,6 +6,7 @@ import films from '../Helpers/film_data'
 
 
 class Search extends React.Component {
+    
 
     render(){
         return (

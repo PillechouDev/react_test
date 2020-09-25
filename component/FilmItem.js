@@ -3,9 +3,10 @@ import {View,Text, StyleSheet,Image} from 'react-native'
 
 
 class FilmItem extends React.Component {
+
+    
     render () {
-        const film = this.props.film
-        console.log(this.props.film.id)
+        
         return (    
             <View style={styles.main_container}>
                 <Image
@@ -13,15 +14,15 @@ class FilmItem extends React.Component {
                         source={{uri: "image"}} />
                 <View style={styles.content}>
                     <View style={styles.head}>
-                        <Text style={styles.title_text}>{this.props.film.id}</Text>
-                        <Text style={styles.title_text}>Note </Text>
+        <Text style={styles.title_text}>{this.props.film == undefined ? "" : this.props.film.title}</Text>
+                        <Text style={styles.title_text}> {this.props.film == undefined ? "" : this.props.film.vote_average} </Text>
                     </View>
                     <View style={styles.desc_container}>
-                        <Text>Description sympathique</Text>
+                        <Text numberOfLines={6}>{this.props.film == undefined ? "" : this.props.film.overview} </Text>
                     </View>
                     <View style={styles.date_container}>
                         <Text style={styles.date}>
-                            Sorti le 00/00/0000
+                            Sorti le {this.props.film == undefined ? "" : this.props.film.realase_date} 
                         </Text>
                     </View>
                 </View>
